@@ -1,0 +1,17 @@
+{
+    "name": "longchengjq/solarterms",
+    "description": "longcheng jq sdk",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "LongchengjqSdk\\": "src/"
+        }
+    },
+   
+    "require": {
+         "php": ">=7.0.0"
+    }
+}
