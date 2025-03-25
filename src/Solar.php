@@ -2,6 +2,9 @@
 
 namespace LongchengjqSdk;
 
+require_once 'Config/LunarUtil.php';
+require_once 'Config/SolarUtil.php';
+
 use LongchengjqSdk\Config\LunarUtil;
 use LongchengjqSdk\Config\SolarUtil;
 use DateTime;

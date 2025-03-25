@@ -1,9 +1,10 @@
 <?php
+
 namespace LongchengjqSdk\Http;
 
 use LongchengjqSdk\Exception\ValidationException;
 
-class ApiIdent 
+class ApiIdent
 {
     // 请求地址
     const API_URL = 'https://help-platform.lastbs.com/';
@@ -26,7 +27,7 @@ class ApiIdent
             'apiSecret' => $apiSecret
         ];
 
-        $result = $this->request_curl(self::API_URL.'sdk/checkUser/checkUser', $data, 'POST');
+        $result = $this->request_curl(self::API_URL . 'sdk/checkUser/checkUser', $data, 'POST');
         if (empty($result)) {
             throw new ValidationException('request error');
         }
@@ -38,7 +39,7 @@ class ApiIdent
     }
 
 
-     /**
+    /**
      * 网络请求
      * author: YJZ <1315670322@qq.com>
      * modifier:

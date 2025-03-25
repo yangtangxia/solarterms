@@ -10,12 +10,11 @@ use LongchengjqSdk\Solar;
 var_dump('test soalr-term start');
 
 $current_date = date('Y-m-d H:i:s');
-$date = Solar::fromDate($current_date);
-var_dump($date);
+$solar = Solar::fromDate($current_date);
 
-$julianday = $date->getJulianDay();
+// 获取星座
+$xinzuo = $solar->getXingZuo();
+var_dump($xinzuo);
 
-var_dump($julianday);
-
-$fromJulianDay = Solar::fromJulianDay($julianday);
-var_dump($fromJulianDay);
+var_dump($solar->getLunar());
+// 获取节气信息
