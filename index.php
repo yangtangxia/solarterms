@@ -1,10 +1,16 @@
 <?php
 require 'vendor/autoload.php';
-use LongchengjqSdk\HelloWorld;
 
-$login = new HelloWorld();
+use LongchengjqSdk\Client;
 
+$key = '1111';
+$secret  = '22222';
 
+try {
+    $client = new Client($key, $secret);
 
-$res = $login->sayHello();
-var_dump($res);
+    var_dump($client);
+} catch (\Exception $e) {
+
+    var_dump($e->getMessage());
+}

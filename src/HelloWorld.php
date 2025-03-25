@@ -1,4 +1,5 @@
 <?php
+
 namespace LongchengjqSdk;
 
 class HelloWorld
@@ -7,4 +8,6 @@ class HelloWorld
     {
         return 'Hello World!';
     }
+
+    public function test() {}
 }
