@@ -2,7 +2,9 @@
 
 namespace LongchengjqSdk\Config;
 
-use LongchengjqSdk\Solar;
+require_once 'Solar.php';
+
+use LongchengjqSdk\Config\Solar;
 
 bcscale(12);
 

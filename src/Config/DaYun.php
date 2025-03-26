@@ -2,6 +2,8 @@
 
 namespace LongchengjqSdk\Config;
 
+require_once 'LunarUtil.php';
+
 use LongchengjqSdk\Config\LunarUtil;
 
 bcscale(12);

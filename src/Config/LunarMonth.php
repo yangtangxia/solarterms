@@ -2,8 +2,12 @@
 
 namespace LongchengjqSdk\Config;
 
+require_once 'LunarUtil.php';
+require_once 'Solar.php';
+require_once 'LunarYear.php';
+
 use LongchengjqSdk\Config\LunarUtil;
-use LongchengjqSdk\Solar;
+use LongchengjqSdk\Config\Solar;
 
 /**
  * 农历月

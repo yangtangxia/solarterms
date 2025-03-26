@@ -2,7 +2,9 @@
 
 namespace LongchengjqSdk\Config;
 
-use LongchengjqSdk\Lunar;
+require_once 'Lunar.php';
+
+use LongchengjqSdk\Config\Lunar;
 
 
 /**

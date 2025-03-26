@@ -1,6 +1,16 @@
 <?php
 
-namespace LongchengjqSdk;
+namespace LongchengjqSdk\Config;
+
+require_once 'LunarUtil.php';
+require_once 'SolarUtil.php';
+require_once 'LunarYear.php';
+require_once 'NineStar.php';
+require_once 'EightChar.php';
+require_once 'JieQi.php';
+require_once 'Fu.php';
+require_once 'ShuJiu.php';
+require_once 'Solar.php';
 
 use LongchengjqSdk\Config\LunarUtil;
 use LongchengjqSdk\Config\SolarUtil;
@@ -19,7 +29,7 @@ bcscale(12);
 
 /**
  * 农历日期
- * @package com\nlf\calendar
+ * @package LongchengjqSdk
  */
 class Lunar
 {
@@ -256,6 +266,7 @@ class Lunar
     $this->minute = $minute;
     $this->second = $second;
     $this->solar = $solar;
+
     $this->compute($y);
   }
 
@@ -316,7 +327,8 @@ class Lunar
         break;
       }
     }
-    return new Lunar($lunarYear, $lunarMonth, $lunarDay, intval($date->format('G')), intval($date->format('i')), intval($date->format('s')), Solar::fromDate($date), $ly);
+
+    return new Lunar($lunarYear, $lunarMonth, $lunarDay, intval($date->format('G')), intval($date->format('i')), intval($date->format('s')), Solar::fromDate($date->format('Y-n-j G:i:s')), $ly);
   }
 
   /**
@@ -326,6 +338,8 @@ class Lunar
   private function computeJieQi($y)
   {
     $jds = $y->getJieQiJulianDays();
+
+
     for ($i = 0, $j = count(Lunar::$JIE_QI_IN_USE); $i < $j; $i++) {
       $this->jieQi[Lunar::$JIE_QI_IN_USE[$i]] = Solar::fromJulianDay($jds[$i]);
     }

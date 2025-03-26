@@ -1,9 +1,10 @@
 <?php
 
-namespace LongchengjqSdk;
+namespace LongchengjqSdk\Config;
 
-require_once 'Config/LunarUtil.php';
-require_once 'Config/SolarUtil.php';
+require_once 'LunarUtil.php';
+require_once 'SolarUtil.php';
+require_once 'Lunar.php';
 
 use LongchengjqSdk\Config\LunarUtil;
 use LongchengjqSdk\Config\SolarUtil;
@@ -15,7 +16,7 @@ bcscale(12);
 
 /**
  * 阳历日期
- * @package com\nlf\calendar
+ * @package LongchengjqSdk
  */
 class Solar
 {
@@ -382,6 +383,7 @@ class Solar
     } else if ($y <= 218) {
       $index = 10;
     }
+
     return SolarUtil::$XING_ZUO[$index];
   }
 

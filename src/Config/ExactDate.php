@@ -2,6 +2,8 @@
 
 namespace LongchengjqSdk\Config;
 
+require_once 'SolarUtil.php';
+
 use LongchengjqSdk\Config\SolarUtil;
 use DateTime;
 use DateTimeZone;

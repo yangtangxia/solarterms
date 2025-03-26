@@ -2,10 +2,16 @@
 
 namespace LongchengjqSdk\Config;
 
+require_once 'LunarUtil.php';
+require_once 'ShouXingUtil.php';
+require_once 'Solar.php';
+require_once 'Lunar.php';
+require_once 'LunarMonth.php';
+
 use LongchengjqSdk\Config\LunarUtil;
 use LongchengjqSdk\Config\ShouXingUtil;
-use LongchengjqSdk\Solar;
-use LongchengjqSdk\Lunar;
+use LongchengjqSdk\Config\Solar;
+use LongchengjqSdk\Config\Lunar;
 
 
 bcscale(12);
